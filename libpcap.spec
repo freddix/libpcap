@@ -1,11 +1,11 @@
 Summary:	System-independent interface for user-level packet capture
 Name:		libpcap
-Version:	1.4.0
+Version:	1.5.1
 Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://www.tcpdump.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	56e88a5aabdd1e04414985ac24f7e76c
+# Source0-md5:	b51f0c611b1e21b73f9ba120023bf972
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
