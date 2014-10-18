@@ -1,7 +1,7 @@
 Summary:	System-independent interface for user-level packet capture
 Name:		libpcap
 Version:	1.6.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 Source0:	http://www.tcpdump.org/release/%{name}-%{version}.tar.gz
