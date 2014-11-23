@@ -8,6 +8,7 @@ Source0:	http://www.tcpdump.org/release/%{name}-%{version}.tar.gz
 # Source0-md5:	5f14191c1a684a75532c739c2c4059fa
 BuildRequires:	bison
 BuildRequires:	flex
+BuildRequires:	libnl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
