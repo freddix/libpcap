@@ -1,11 +1,12 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/libpcap.git
 Summary:	System-independent interface for user-level packet capture
 Name:		libpcap
-Version:	1.6.2
-Release:	2
+Version:	1.7.3
+Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://www.tcpdump.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	5f14191c1a684a75532c739c2c4059fa
+# Source0-md5:	9ce284eacc02cb5491e123b875f3f63c
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	libnl-devel
@@ -31,12 +32,11 @@ Header files and develpment documentation for libpcap.
 %setup -q
 
 %build
-export CFLAGS="%{rpmcflags}"
-export LDFLAGS="%{rpmldflags}"
 %{__aclocal}
 %{__autoconf}
+export CFLAGS="$(pkg-config --cflags libnl-genl-3.0) %{rpmcflags}"
 %configure \
-	--enable-ipv6		\
+	--enable-ipv6	\
 	--with-libnl
 %{__make}
 
